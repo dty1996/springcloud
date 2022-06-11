@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.*;
  * @author dty
  */
 @RestController
-@RequestMapping("payment")
+@RequestMapping
 public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
 
-    @GetMapping("info/{id}")
+    @GetMapping("get/{id}")
     public CallResult get(@PathVariable Long id) {
         Payment payment = paymentService.get(id);
         return new CallResult(200, "success", payment);
     }
-    @PostMapping("save")
+    @PostMapping("create")
     public CallResult save(String serial){
         paymentService.save(serial);
-        return new CallResult(200, "success");
+        return CallResult.success();
     }
 }
