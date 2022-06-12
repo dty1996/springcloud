@@ -13,16 +13,16 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String URL = "http://localhost:8001/payment";
+    private static final String URL = "http://PaymentApp";
 
     @GetMapping("get/{id}")
     public CallResult get(@PathVariable Long id){
-        return restTemplate.getForObject(URL + "/get/" +id, CallResult.class);
+        return restTemplate.getForObject(URL + "/payment/get/" +id, CallResult.class);
     }
 
     @GetMapping("create")
     public CallResult create( Payment payment){
-        return restTemplate.postForObject(URL + "/create", payment, CallResult.class );
+        return restTemplate.postForObject(URL + "/payment/create", payment, CallResult.class );
     }
 
 }
