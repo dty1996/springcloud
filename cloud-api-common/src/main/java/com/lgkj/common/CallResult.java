@@ -1,4 +1,4 @@
-package com.lgkj.model.common;
+package com.lgkj.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

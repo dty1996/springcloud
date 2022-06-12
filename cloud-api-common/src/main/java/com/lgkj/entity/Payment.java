@@ -1,4 +1,4 @@
-package com.lgkj.model.entity;
+package com.lgkj.entity;
 
 import lombok.Data;
 

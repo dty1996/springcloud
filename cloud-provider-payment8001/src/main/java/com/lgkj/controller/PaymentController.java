@@ -1,7 +1,7 @@
 package com.lgkj.controller;
 
-import com.lgkj.model.common.CallResult;
-import com.lgkj.model.entity.Payment;
+import com.lgkj.common.CallResult;
+import com.lgkj.entity.Payment;
 import com.lgkj.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * @author dty
  */
 @RestController
-@RequestMapping
+@RequestMapping("payment")
 public class PaymentController {
 
     @Autowired
@@ -22,8 +22,8 @@ public class PaymentController {
         return new CallResult(200, "success", payment);
     }
     @PostMapping("create")
-    public CallResult save(String serial){
-        paymentService.save(serial);
+    public CallResult save(@RequestBody Payment payment){
+        paymentService.save(payment);
         return CallResult.success();
     }
 }

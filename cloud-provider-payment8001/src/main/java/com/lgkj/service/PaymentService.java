@@ -1,6 +1,7 @@
 package com.lgkj.service;
 
-import com.lgkj.model.entity.Payment;
+
+import com.lgkj.entity.Payment;
 
 /**
  * @author dty
@@ -14,8 +15,8 @@ public interface PaymentService {
     Payment get(Long id);
     /**
      * 保存订单信息
-     * @param serial
+     * @param payment
      * @return
      */
-    void save(String serial);
+    void save(Payment payment);
 }

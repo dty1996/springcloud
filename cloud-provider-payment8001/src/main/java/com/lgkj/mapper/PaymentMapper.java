@@ -1,6 +1,6 @@
 package com.lgkj.mapper;
 
-import com.lgkj.model.entity.Payment;
+import com.lgkj.entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

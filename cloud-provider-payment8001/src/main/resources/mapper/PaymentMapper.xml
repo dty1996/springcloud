@@ -3,12 +3,12 @@
 
 <mapper namespace="com.lgkj.mapper.PaymentMapper">
 
-    <insert id="save" parameterType="com.lgkj.model.entity.Payment" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.lgkj.entity.Payment" useGeneratedKeys="true" keyProperty="id">
         insert into payment(serial)  values(#{serial});
     </insert>
 
 
-    <resultMap id="BaseResultMap" type="com.lgkj.model.entity.Payment">
+    <resultMap id="BaseResultMap" type="com.lgkj.entity.Payment">
         <id column="id" property="id" jdbcType="BIGINT"/>
         <id column="serial" property="serial" jdbcType="VARCHAR"/>
     </resultMap>
