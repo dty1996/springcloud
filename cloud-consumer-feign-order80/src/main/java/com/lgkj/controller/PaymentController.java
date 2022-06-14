@@ -24,4 +24,8 @@ public class PaymentController {
     public CallResult get(@PathVariable("id") Long  id){
         return paymentService.get(id);
     }
+    @GetMapping("timeout")
+    public String timeout(){
+        return paymentService.timeout();
+    }
 }

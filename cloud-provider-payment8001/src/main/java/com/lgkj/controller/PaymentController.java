@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author dty
@@ -51,5 +52,15 @@ public class PaymentController {
             log.info("服务：" + instance.getInstanceId() + " " + instance.getHost()  + " " +  instance.getPort() + " " +instance.getUri());
         }
         return discoveryClient;
+    }
+
+    @GetMapping("timeout")
+    public String timeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
     }
 }

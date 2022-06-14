@@ -22,4 +22,7 @@ public interface PaymentService {
      */
     @GetMapping("/payment/get/{id}")
     CallResult get(@PathVariable("id") Long  id);
+
+    @GetMapping("/payment/timeout")
+    String timeout();
 }

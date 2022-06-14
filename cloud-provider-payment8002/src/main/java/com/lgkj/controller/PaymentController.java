@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author dty
  */
@@ -29,5 +31,14 @@ public class PaymentController {
     public CallResult save(@RequestBody Payment payment){
         paymentService.save(payment);
         return CallResult.success();
+    }
+    @GetMapping("timeout")
+    public String timeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
     }
 }
