@@ -1,6 +1,8 @@
 package com.lgkj.controller;
 
+import com.lgkj.common.CallResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,4 +22,6 @@ public class OrderController {
     public String getString(){
         return restTemplate.getForObject(URL + "/payment/zk", String.class);
     }
+
+
 }
