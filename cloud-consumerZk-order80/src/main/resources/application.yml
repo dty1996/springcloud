@@ -1,11 +1,10 @@
 server:
-  port: 8004
+  port: 800
 
 #服务别名----注册zookeeper到注册中心 zookeeper服务节点为临时节点
 spring:
   application:
-    name: PaymentApp
+    name: OrderApp
   cloud:
     zookeeper:
       connect-string: 114.132.70.228:2181
-
