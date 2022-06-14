@@ -21,7 +21,7 @@ public class PaymentController {
     private String serverPort;
 
     @GetMapping("get/{id}")
-    public CallResult get(@PathVariable Long id) {
+    public CallResult get(@PathVariable("id") Long id) {
         Payment payment = paymentService.get(id);
         return CallResult.success("success," + "端口：" + serverPort, payment);
     }
