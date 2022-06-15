@@ -21,11 +21,23 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("get/{id}")
-    public CallResult get(@PathVariable("id") Long  id){
+    public CallResult get(@PathVariable("id") Long id) {
         return paymentService.get(id);
     }
+
     @GetMapping("timeout")
-    public String timeout(){
+    public String timeout() {
         return paymentService.timeout();
     }
+
+    @GetMapping("/payment/getInfo")
+    String getInfo(){
+        return paymentService.getInfo();
+    }
+
+    @GetMapping("/payment/getTimeoutInfo")
+    String getTimeoutInfo(){
+        return paymentService.getTimeoutInfo();
+}
+
 }

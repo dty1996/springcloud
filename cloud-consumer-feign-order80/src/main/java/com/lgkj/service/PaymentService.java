@@ -23,6 +23,25 @@ public interface PaymentService {
     @GetMapping("/payment/get/{id}")
     CallResult get(@PathVariable("id") Long  id);
 
+    /**
+     * 获取超时订单
+     * @param
+     * @return
+     */
     @GetMapping("/payment/timeout")
     String timeout();
+
+    /**
+     * 获得超时信息
+     * @return String
+     */
+    @GetMapping("/payment/getInfo")
+    String getInfo();
+
+    /**
+     * 获得超时信息
+     * @return
+     */
+    @GetMapping("/payment/getTimeoutInfo")
+    String getTimeoutInfo();
 }
