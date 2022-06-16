@@ -1,9 +1,9 @@
 server:
   port: 800
 
-spring:
-  application:
-    name: Order80App
+#spring:
+#  application:
+#    name: Order80App
 
 eureka:
   client:
@@ -13,9 +13,12 @@ eureka:
     fetchRegistry: true
     service-url:
       #单机
-#      defaultZone: http://localhost:7001/eureka
+      #      defaultZone: http://localhost:7001/eureka
       #集群
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
 ribbon:
   ReadTimeout: 5000
   ConnectionTimeout: 5000
+Feign:
+  hystrix:
+    enabled: true

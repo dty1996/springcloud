@@ -38,6 +38,6 @@ public class PaymentController {
     @GetMapping("/payment/getTimeoutInfo")
     String getTimeoutInfo(){
         return paymentService.getTimeoutInfo();
-}
+    }
 
 }
