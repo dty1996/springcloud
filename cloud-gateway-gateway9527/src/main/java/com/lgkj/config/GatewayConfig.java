@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author dty
  */
-@Configuration
+//@Configuration
 public class GatewayConfig {
 
     /**
@@ -18,14 +18,14 @@ public class GatewayConfig {
      * @param builder
      * @return
      */
-    @Bean
+//    @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder){
         return  builder
                 .routes()
-                .route("payment",
-                        r -> r.path("/guonei").uri("https://news.baidu.com"))
-                .route("payment_lb",
-                        r -> r.path("/payment/get/**").uri("lb://PaymentApp"))
+//                .route("payment",
+//                        r -> r.path("/guonei").uri("https://news.baidu.com"))
+//                .route("payment_lb",
+//                        r -> r.path("/payment/get/**").uri("lb://PaymentApp"))
                 .build();
 
     }
