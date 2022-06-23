@@ -1,0 +1,27 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          skipSslValidation: true #跳过ssl验证
+          uri: https://github.com/dty1996/springcloud-config.git #配置github远程仓库
+          password: 1647171362d
+          username: 1451069487@qq.com
+          search-paths:
+            - springcloud-config
+      label: main #远程分支名
+
+eureka:
+  instance:
+    instance-id: configServer
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka

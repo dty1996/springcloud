@@ -7,9 +7,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://106.12.119.213:3306/springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: 123456
+    url: jdbc:mysql://rm-7xvfyvrd71yu4pv9iio.mysql.rds.aliyuncs.com/springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root_dty
+    password: 1647171362dT@
 eureka:
   client:
     #表示是否将自己注册进EurekaServer默认为true。
