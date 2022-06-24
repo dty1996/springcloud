@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -23,7 +23,7 @@ spring:
 
 eureka:
   instance:
-    instance-id: configClient3355
+    instance-id: configClient3366
     prefer-ip-address: true
   client:
     register-with-eureka: true

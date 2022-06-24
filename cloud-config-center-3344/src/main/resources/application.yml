@@ -15,6 +15,18 @@ spring:
           search-paths:
             - springcloud-config
       label: main #远程分支名
+#rabbitmq相关配置
+  rabbitmq:
+    host: 114.132.70.228
+    port: 5672
+    username: admin
+    password: 123
+# 暴露所有的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
 
 eureka:
   instance:
